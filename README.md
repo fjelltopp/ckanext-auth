@@ -1,3 +1,8 @@
+# Warning
+This fork uses extension [ckanext-emailasusername](https://github.com/fjelltopp/ckanext-emailasusername) to enable logging it with ckan username or e-mail
+
+#README
+
 Use CKAN  as an auth service in your application.
 
 It adds a new `user_login` action to the CKAN API so that you can call it for authentication of a user from a third party application:
