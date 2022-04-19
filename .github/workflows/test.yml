@@ -64,7 +64,6 @@ jobs:
         pip install -r requirements.txt
         pip install -r dev-requirements.txt
         pip install git+https://github.com/fjelltopp/ckanext-emailasusername.git
-        pip install ckantoolkit
         pip install -e .
         # Replace default path to CKAN core config file with the one on the container
         sed -i -e 's/use = config:.*/use = config:\/srv\/app\/src\/ckan\/test-core.ini/' test.ini
