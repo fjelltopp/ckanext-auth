@@ -1,10 +1,10 @@
 import ckan.logic as logic
 import ckan.lib.authenticator as authenticator
-from ckan.plugins import toolkit as tk
 from ckan.common import _
 from ckanext.emailasusername.blueprint import user_by_username_or_email
 
 _check_access = logic.check_access
+
 
 def user_login(context, data_dict):
     # Adapted from  https://github.com/ckan/ckan/blob/master/ckan/views/user.py#L203-L211
@@ -14,7 +14,6 @@ def user_login(context, data_dict):
         },
         u'error_summary': {_(u'auth'): _(u'Incorrect username or password')}
     }
-    model = context['model']
     user = user_by_username_or_email(data_dict['id'], flash_errors=False)
     if not user:
         return generic_error_message
